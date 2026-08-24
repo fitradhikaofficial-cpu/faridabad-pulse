@@ -1,11 +1,8 @@
 /**
  * Central brand configuration.
  *
- * LOGO ASSET SLOTS
- * ----------------
- * Drop the supplied Faridabad Business logo files into `public/brand/` using the
- * filenames below (or change the paths here). Until a file exists at the path,
- * the <Logo /> component renders the typographic lockup fallback.
+ * Supplied logo assets are stored in:
+ * public/brand/
  *
  * Do not recreate, recolour, stretch or otherwise modify the supplied logos.
  */
@@ -23,20 +20,27 @@ export const brand = {
 } as const;
 
 /**
- * Set a value to the asset path once the supplied file is added.
- * Example: wideLight: "/brand/fb-logo-wide-light.svg"
+ * Official supplied Faridabad Business logo assets.
+ *
+ * All paths are relative to the public/ directory.
  */
-export const logoAssets: {
-  wideLight: string | null;
-  wideDark: string | null;
-  monogram: string | null;
-  monogramSquare: string | null;
-} = {
-  wideLight: null,
-  wideDark: null,
-  monogram: null,
-  monogramSquare: null,
-};
+export const logoAssets = {
+  // For light/paper backgrounds such as the main website header.
+  wideLight:
+    "/brand/faridabad-business-full-logo-white-background.png",
+
+  // For dark backgrounds such as the footer.
+  wideDark:
+    "/brand/faridabad-business-full-logo-black-background-white-red.png",
+
+  // Compact logo for smaller layouts.
+  monogram:
+    "/brand/faridabad-business-monogram-black-circle.png",
+
+  // Square compact mark.
+  monogramSquare:
+    "/brand/faridabad-business-monogram-red-square.png",
+} as const;
 
 export const socialLinks = [
   { label: "LinkedIn", url: "#" },
