@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { articles } from "@/data/articles";
+import { logoAssets } from "@/config/brand";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -46,15 +47,13 @@ function Index() {
       <header className="border-b border-black/10 bg-[#fcfbf8]">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
           <div className="flex min-h-[92px] items-center justify-between gap-6">
-            <Link to="/" className="group shrink-0">
-              <div className="font-sans text-[26px] font-black leading-none tracking-[-0.055em] sm:text-[32px]">
-                FARIDABAD
-                <span className="text-[#b51f2b]"> BUSINESS</span>
-              </div>
-              <div className="mt-2 text-[8px] font-semibold uppercase tracking-[0.19em] text-black/55 sm:text-[9px]">
-                The Business & Entrepreneurship Platform of Faridabad
-              </div>
-            </Link>
+            <Link to="/" className="group flex shrink-0 items-center">
+  <img
+    src={logoAssets.wideLight}
+    alt="Faridabad Business"
+    className="h-auto w-[190px] object-contain sm:w-[225px]"
+  />
+</Link>
 
             <nav className="hidden items-center gap-7 text-[12px] font-semibold uppercase tracking-[0.12em] lg:flex">
               <Link
@@ -356,10 +355,11 @@ function Index() {
       <footer className="bg-[#171717] text-white">
         <div className="mx-auto max-w-[1400px] px-5 py-12 sm:px-8">
           <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
-            <div>
-              <div className="text-2xl font-black tracking-[-0.05em]">
-                FARIDABAD <span className="text-[#d83a46]">BUSINESS</span>
-              </div>
+            <img
+  src={logoAssets.wideDark}
+  alt="Faridabad Business"
+  className="h-auto w-[210px] object-contain"
+ />
 
               <p className="mt-4 max-w-md text-sm leading-6 text-white/50">
                 The Business & Entrepreneurship Platform of Faridabad.
